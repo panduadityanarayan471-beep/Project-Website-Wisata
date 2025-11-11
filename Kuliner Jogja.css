@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fcfcf7; 
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4B3621; 
+}
+
+
+.btn {
+    background-color: #FFD700; 
+    color: #4B3621; 
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #8B4513; 
+    color: white;
+}
+
+
+
+.main-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #8B4513; 
+}
+
+nav ul { list-style: none; display: flex; }
+nav ul li a { text-decoration: none; color: #333; padding: 10px 15px; display: block; transition: color 0.3s; }
+nav ul li a:hover { color: #FFD700; background-color: #4B3621; } 
+
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; 
+}
+
+.hero-content {
+    background: rgba(75, 54, 33, 0.5); 
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+
+.food-gallery, .recipe-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.food-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-info h3 {
+    color: #8B4513; 
+}
+
+
+.detail-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 54, 33, 0.9); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.1em;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease-out;
+}
+
+.food-card:hover .detail-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4B3621; 
+    color: #FFD700; 
+    margin-top: 30px;
+}
